@@ -1,0 +1,14 @@
+﻿@model List<image>
+@{
+    ViewBag.Title = "GetImagesViaCategory";
+}
+
+<h2>GetImagesViaCategory</h2>
+
+@foreach(var image in Model)
+{
+    <div><img src="@image.url" /></div>    
+}
+
+<button>@Html.ActionLink("Back", "Index")</button>
+

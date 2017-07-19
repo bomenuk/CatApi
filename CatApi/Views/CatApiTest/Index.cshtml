@@ -1,0 +1,12 @@
+﻿@model List<category>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>GetImagesViaCategory</h2>
+
+@foreach (var category in Model)
+{
+    <div><input type="button" class="btn btn-info" value="@category.name" 
+                onclick="location.href='@Url.Action("GetImagesViaCategory", "CatApiTest", category)'" /></div>
+}
